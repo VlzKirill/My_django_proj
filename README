@@ -10,4 +10,6 @@ django-admin startproject learning_log .
 5. Создать базу данных
 python manage.py migrate
 6. Проверить текущее состояние проекта:
-python manage.py runserver
+python manage.py runserver 8000
+7. Создать инфраструктуру, необходимую для приложения:
+python manage.py startapp learning_logs
