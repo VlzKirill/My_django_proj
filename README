@@ -1,0 +1,13 @@
+Инициализация проекта:
+1. Создать виртуальную среду:
+python -m venv ll_env
+2. Активировать виртуальную среду:
+.\ll_env\Scripts\activate.bat
+3. Установить django:
+pip install django
+4. Создать проект в django:
+django-admin startproject learning_log .
+5. Создать базу данных
+python manage.py migrate
+6. Проверить текущее состояние проекта:
+python manage.py runserver
