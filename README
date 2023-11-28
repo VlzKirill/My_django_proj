@@ -13,3 +13,34 @@ python manage.py migrate
 python manage.py runserver 8000
 7. Создать инфраструктуру, необходимую для приложения:
 python manage.py startapp learning_logs
+
+8. Создать модели (классы). После внесений изменений в приложение, добавления новой модели, необходимо прописать какие приложения установленны в проекте:
+добавить строки в settings.py INSTALLED_APPS.
+Затем добавитьв  базу:
+python manage.py makemigrations learning_logs
+python manage.py migrate
+
+9. Если нужна админка - создать суперпользователя:
+python manage.py createsuperuser
+
+
+Интерактивный режим из консоли:
+Например:
+python manage.py shell
+>> from learning_logs.models import Topic
+>> Topic.objects.all()
+>> topics = Topic.objects.all()
+>> for topic in topics:
+>>   print(topic.id, topic)
+ПОсмотреть значения text и date:
+>> t = Topic.objects.get(id=1)
+>> t.text
+>> t.date_added
+Посмотреть записи относящиеся к теме:
+>> t.entry_set.all()
+(добавить _set к модели).
+
+Инфа по полям в django:
+https://docs.djangoproject.com/en/4.2/ref/models/fields/
+Django API:
+https://docs.djangoproject.com/en/4.2/topics/db/queries/
