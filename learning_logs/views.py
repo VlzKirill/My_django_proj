@@ -55,7 +55,7 @@ def new_entry(request, topic_id):
 def edit_entry(request, entry_id):
     """Редактирует существующую запись"""
     entry = Entry.objects.get(id=entry_id)
-    topic = Entry.topic
+    topic = entry.topic
 
     if request.method !="POST":
         # Исходный запрос; форма заполняется данными текущей записи
