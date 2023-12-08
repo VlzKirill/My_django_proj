@@ -60,3 +60,11 @@ python manage.py migrate
 
 Сброс базы данных:
 python manage.py flush
+
+Оформление красивое:
+pip install django-bootstrap4
+http://getbootstrap.com/
+Examples - Navbars
+
+Создание requirements.txt:
+pip freeze > requirements.txt
