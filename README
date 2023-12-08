@@ -2,6 +2,7 @@
 1. Создать виртуальную среду:
 python -m venv ll_env
 2. Активировать виртуальную среду:
+cmd.exe
 .\ll_env\Scripts\activate.bat
 3. Установить django:
 pip install django
