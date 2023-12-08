@@ -31,7 +31,7 @@ python manage.py shell
 >> Topic.objects.all()
 >> topics = Topic.objects.all()
 >> for topic in topics:
->>   print(topic.id, topic)
+>>    print(topic.id, topic)
 ПОсмотреть значения text и date:
 >> t = Topic.objects.get(id=1)
 >> t.text
@@ -44,3 +44,19 @@ python manage.py shell
 https://docs.djangoproject.com/en/4.2/ref/models/fields/
 Django API:
 https://docs.djangoproject.com/en/4.2/topics/db/queries/
+
+ПОльзователи:
+>> python manage.py shell
+>> from django.contrib.auth.models import User
+>> User.objects.all()
+>> for user in User.objects.all():
+>>   print(user.username, user.id)
+
+Миграция базы данных:
+python manage.py makemigrations learning_logs
+1
+1
+python manage.py migrate
+
+Сброс базы данных:
+python manage.py flush
